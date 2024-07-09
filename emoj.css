@@ -1,0 +1,137 @@
+#face{
+  height: 500px;
+  width: 500px;
+  background-color: rgb(216, 216, 30);
+  border-radius: 50%;
+  margin: 10px 0px 0px 10px;
+  position: relative;
+  transition: all;
+}
+#eye1{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  background-color: black;
+  border-radius: 60%;
+  margin: 130px 0px 0px 90px;
+}
+#eye2{
+  height: 90px;
+  width: 100px;
+  position: absolute;
+  background-color: black;
+  border-radius: 50%;
+  margin: 130px 0px 0px 300px;
+}
+#mouth{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  border-bottom: 60px solid rgb(240, 9, 9);
+  border-radius: 0 0 100px 100px;
+  margin:250px 0px 0px 200px ;
+}
+
+.emoji {
+  position: relative;
+  background:#ffd026;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: float 2s ease infinite;
+}
+
+.face {
+  width: 150px;
+  height: 150px;
+}
+
+.eyebrows,
+.eyes,
+.mouth {
+  position: absolute;
+  background: #4e4e4e;
+}
+
+.eyebrows {
+  top: 30px;
+  width: 80px;
+  height: 20px;
+  border-radius: 10px;
+  animation: eyebrows-move 3s ease infinite;
+}
+
+.eyebrows:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100px;
+  width: 80px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.eyes {
+  top: 60px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.eyes:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.mouth {
+  bottom: 40px;
+  width: 70px;
+  height: 50px;
+  border-radius: 0 0 100px 100px;
+  animation: mouth-move 5s ease infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes eyebrows-move {
+  0%, 50%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(20px);
+  }
+  75% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes mouth-move{ 
+  0%, 50%, 100% {
+    width: 70px;
+  }
+  25% {
+    width: 10px;}
+  
+}
+
+body{
+  background-image: url('EMOJI.jfif');
+  background-size: cover;
+  background-attachment: fixed;
+
+}
